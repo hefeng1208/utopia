@@ -14,7 +14,7 @@ git add -A
 git commit -m 'deploy'
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:hefeng1208/Heartbreak-utopia.git master:gh-pages
+# git push -f git@github.com:hefeng1208/Heartbreak-utopia.git master:gh-pages
 
 # 如果使用 travis 持续集成
 git push -f https://${GITHUB_TOKEN}@github.com:hefeng1208/Heartbreak-utopia.git master:gh-pages
