@@ -1,7 +1,10 @@
 # Javascript Node CircleCI 2.0 configuration file
 #
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
+#  https://www.cnblogs.com/yangzhou33/p/11546713.html
+#  https://sunburst.wang/posts/2019/03/20/deploying-to-github-pages-using-circle-ci-2-0.html
+#  checkout 页面的 deploy key 只有读权限，没有写权限；如果要加入有读写权限的 deploy key，需要手动生成 ssh 然后到 ssh permission 页面去加。deploy key 只对特定仓库有权限。
+#  user key 对你的账号下的所有仓库都有读写权限。
 version: 2
 jobs:
   build:
@@ -42,5 +45,5 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      # run deploy!
-      - run: yarn deploy
+      # run deploy.sh!
+      - run: yarn run deploy
