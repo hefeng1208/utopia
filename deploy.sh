@@ -17,6 +17,6 @@ git add -A
 git commit -m 'chore(deploy): deploy gh-pages'
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:hefeng1208/Heartbreak-utopia.git master:gh-pages
+git push -f git@github.com:hefeng1208/utopia.git master:gh-pages
 
 cd -

@@ -1,9 +1,9 @@
 module.exports = {
-  base: '/Heartbreak-utopia/',
-  title: 'Heartbreak utopia',
+  base: '/utopia/',
+  title: 'Utopia',
   description: 'Vuepress blog demo',
   themeConfig: {
-    repo: 'https://github.com/hefeng1208/Heartbreak-utopia',
+    repo: 'https://github.com/hefeng1208/utopia',
     repoLabel: 'My GitHub',
     nav: [
       { text: 'Home', link: '/' },
