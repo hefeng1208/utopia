@@ -24,7 +24,7 @@ jobs:
       # connect to github by ssh
       - add_ssh_keys:
           fingerprints:
-            - "6e:d6:58:00:f0:4d:7f:5d:62:a7:f6:7d:0d:16:64:a1"
+            - "a1:91:62:44:30:92:21:b3:ed:1f:e1:78:21:07:64:77"
 
       - checkout
 
