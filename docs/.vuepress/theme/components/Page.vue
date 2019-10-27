@@ -2,7 +2,7 @@
   <main class="page">
     <slot name="top"/>
     <TitleContent :pages="$page"/>
-    <Content :custom="false"/>
+    <Content :custom="false" class="content"/>
     <footer class="page-edit">
       <div
         class="edit-link"

@@ -7,7 +7,7 @@
         <el-row :gutter="8">
           <el-col :span="4">
             
-            <el-tag type="success"><i class="el-icon-edit"></i>Author:Finen</el-tag>
+            <el-tag type="success"><i class="el-icon-edit"></i>Author:IT民工</el-tag>
           </el-col>
           <el-col :span="8">
             <div class="tags">

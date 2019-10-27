@@ -1,6 +1,6 @@
 module.exports = [
   {
-    text: "IT民工",
+    text: "Category",
     items: [
       // {
       //   text: 'BackEnd',
@@ -52,10 +52,10 @@ module.exports = [
     text: 'Tags',
     link: '/tags/',
   },
-  // {
-  //   text: 'Resume',
-  //   link: '/about'
-  // },
+  {
+    text: 'Resume',
+    link: '/about/'
+  },
   {
     text: 'Friends',
     link: '/friends/'

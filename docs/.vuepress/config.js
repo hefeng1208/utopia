@@ -1,5 +1,5 @@
 module.exports = {
-  base: '/utopia/',
+  base: '/',
   title: 'Utopia',
   description: 'Vuepress blog demo',
   head: [
@@ -24,6 +24,10 @@ module.exports = {
     ['@vuepress/register-components', true],
     ['@vuepress/search', {
       searchMaxSuggestions: 10
+    }],
+    ['@vuepress/pwa', {
+      serviceWorker: true,
+      updatePopup: true
     }]
   ],
   themeConfig: {
@@ -149,7 +153,7 @@ function genFrontendConfig (title){
       collapsable: false,
       children: [
         '',
-        'wxapp'
+        'js/'
       ]
     }
   ]
