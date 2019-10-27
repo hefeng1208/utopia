@@ -7,7 +7,7 @@
  -->
 
 <template>
-  <div class="archives-content" style="margin-top: 50px">
+  <div class="archives-content">
     <div class="content-top">嗯..! 目前共计 {{ArchivesArrayLength}} 篇日志！继续努力。</div>
     <div class="block">
       <el-timeline :reverse="true">
