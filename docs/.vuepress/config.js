@@ -1,5 +1,5 @@
 module.exports = {
-  base: '/',
+  base: '/utopia/',
   title: 'Utopia',
   description: 'Vuepress blog demo',
   head: [
