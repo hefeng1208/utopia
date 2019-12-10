@@ -18,7 +18,8 @@
             <el-tag color="#fff" ><i class="el-icon-date"></i>{{pages.frontmatter.date}}</el-tag>
           </el-col>
           <el-col :span="4">
-            <el-tag color="#1FF79D" type="success">原创</el-tag>
+            <el-tag color="#1FF79D" type="success" v-if="pages.frontmatter.copyright">{{'原创'}}</el-tag>
+            <el-tag type="danger" v-else>{{'转载'}}</el-tag>
           </el-col>
         </el-row>
         

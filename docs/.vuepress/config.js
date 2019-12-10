@@ -153,7 +153,7 @@ function genFrontendConfig (title){
       collapsable: false,
       children: [
         '',
-        'js/'
+        'pattern/observer-publisher'
       ]
     }
   ]
