@@ -2,19 +2,6 @@ module.exports = [
   {
     text: "Category",
     items: [
-      // {
-      //   text: 'BackEnd',
-      //   items: [
-      //     {
-      //       text: 'Java',
-      //       link: '/blog/java/'
-      //     },
-      //     {
-      //       text: 'Python',
-      //       link: '/blog/python/'
-      //     }
-      //   ]
-      // },
       {
         text: 'FrontEnd',
         items: [
@@ -24,15 +11,6 @@ module.exports = [
           }
         ]
       },
-      // {
-      //   text: 'Linux',
-      //   items: [
-      //     {
-      //       text: 'Linux',
-      //       link: '/blog/linux/'
-      //     }
-      //   ]
-      // },
       {
         text: 'Other',
         items: [
@@ -52,12 +30,12 @@ module.exports = [
     text: 'Tags',
     link: '/tags/',
   },
-  {
-    text: 'Resume',
-    link: '/about/'
-  },
-  {
-    text: 'Friends',
-    link: '/friends/'
-  }
+  // {
+  //   text: 'Resume',
+  //   link: '/about/'
+  // },
+  // {
+  //   text: 'Friends',
+  //   link: '/friends/'
+  // }
 ]

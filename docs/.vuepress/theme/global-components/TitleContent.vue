@@ -6,7 +6,6 @@
       <div class="page-info">
         <el-row :gutter="8">
           <el-col :span="4">
-            
             <el-tag type="success"><i class="el-icon-edit"></i>Author:IT民工</el-tag>
           </el-col>
           <el-col :span="8">
@@ -15,11 +14,13 @@
             </div>
           </el-col>
           <el-col :span="8">
-            <el-tag color="#fff" ><i class="el-icon-date"></i>{{pages.frontmatter.date}}</el-tag>
+            <el-tag color="#fff" ><i class="el-icon-date"></i>{{editDate}}</el-tag>
           </el-col>
           <el-col :span="4">
-            <el-tag color="#1FF79D" type="success" v-if="pages.frontmatter.copyright">{{'原创'}}</el-tag>
-            <el-tag type="danger" v-else>{{'转载'}}</el-tag>
+            <el-tag type="warning" v-if="pages.frontmatter.copyright">{{'原创'}}</el-tag>
+            <div class="is-pointer" v-else>
+              <el-tag type="danger" @click="gotoReferPerson">{{'转载'}}</el-tag>
+            </div>
           </el-col>
         </el-row>
         
@@ -29,14 +30,29 @@
 </template>
 
 <script>
+import { DateTime } from 'luxon'
 export default {
   name: "TitleContent",
   props: {
     pages: {
       type: Object,
-      default: []
+      default: () => {}
     }
   },
+  computed: {
+    editDate() {
+      let FRONT_MATTER = this.pages.frontmatter
+      if (FRONT_MATTER && FRONT_MATTER.date) {
+        return FRONT_MATTER.date.replace('T', ' ').replace(/\..+/, '')
+      }
+      return DateTime.fromJSDate(new Date()).toFormat('yyyy-MM-dd HH:mm:ss')
+    }
+  },
+  methods: {
+    gotoReferPerson() {
+      window.open(this.pages.frontmatter.refer)
+    }
+  }
 }
 </script>
 
@@ -51,6 +67,9 @@ export default {
 }
 .tags>.el-tag {
   margin-left: 10px;
+}
+.is-pointer > .el-tag {
+  cursor: pointer;
 }
 </style>
 

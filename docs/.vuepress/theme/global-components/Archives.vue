@@ -21,7 +21,7 @@
             <p class="article-title">
               <router-link :to="item.regularPath">{{ item.frontmatter.title }}</router-link>
             </p>
-            <p>Finen于{{ item.frontmatter.date}}发布该文章</p>
+            <p>IT 民工于{{ dateLine}}发布该文章</p>
             <div class="archives-tag">
               <p class="article-tag">
                 Tags:
@@ -36,6 +36,7 @@
 </template>
 
 <script>
+import { DateTime } from 'luxon'
 export default {
   name: "Archives",
   props: {
@@ -49,6 +50,15 @@ export default {
       ArchivesArray: [],
       ArchivesArrayLength: 0
     };
+  },
+  computed: {
+    dateLine() {
+      let FRONT_MATTER = this.pages.frontmatter
+      if (FRONT_MATTER && FRONT_MATTER.date) {
+        return FRONT_MATTER.date.replace('T', ' ').replace(/\..+/, '')
+      }
+      return DateTime.fromJSDate(new Date()).toFormat('yyyy-MM-dd HH:mm:ss')
+    }
   },
   mounted: function() {
     this.filterArchivesList();
@@ -78,13 +88,10 @@ export default {
      * @return: 
      */
     formatDate(time) {
-      var dateTime = new Date(new Date(time).getTime());
-      var y = dateTime.getFullYear();
-      var month = dateTime.getMonth() + 1;
-      var m = month < 10 ? "0" + month : month;
-      var d = dateTime.getDate() < 10 ? "0" + dateTime.getDate() : dateTime.getDate();
-      var sendDate = y + "-" + m + "-" + d;
-      return sendDate;
+      if (time) {
+        return time.split('T')[0]
+      }
+      return DateTime.fromJSDate(new Date()).toFormat('yyyy-MM-dd')
     },
     /**
      * @description: 对时间进行排序

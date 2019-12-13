@@ -35,7 +35,7 @@ module.exports = {
     repoLabel: 'GitHub',
     nav: require('./nav/index'),
     sidebar: {
-      '/blog/git/': genGitSidebarConfig('git学习'),
+      '/blog/git/': genGitSidebarConfig('Git 学习'),
 
       // linux
       '/blog/linux/': genLinuxSidebarConfig('Linux学习'),
@@ -67,11 +67,11 @@ function genGitSidebarConfig (title) {
       title,
       collapsable: false,
       children: [
-        '',
-        'git-advanced-command',
-        'git-remote-command',
-        'git-branch-command',
-        'git-cooperate-develop-command'
+        ''
+        // 'git-advanced-command',
+        // 'git-remote-command',
+        // 'git-branch-command',
+        // 'git-cooperate-develop-command'
       ]
     }
   ]

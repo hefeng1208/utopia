@@ -17,7 +17,7 @@
             <p class="article-title">
               <router-link :to="items.regularPath">{{ items.frontmatter.title }}</router-link>
             </p>
-            <p>Finen于{{ items.frontmatter.date}}发布该文章</p>
+            <p>IT 民工于{{ items.frontmatter.date}}发布该文章</p>
             <!-- <el-tag>原创</el-tag><br/> -->
             <div class="archives-tag">
               <p class="article-tag">

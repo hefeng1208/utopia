@@ -24,12 +24,11 @@ comments: true
 ::: tip
 
 欢迎留言提交互加友链!最好提供你网站的简介哟<br>
-如果您需要更改您的链接或者链接有错误，请联系我: [hefengen@hotmail.com](mailto:hefengen@hotmail.com)
+如果您需要更改您的链接或者链接有错误，请联系我: [fore_end@163.com](mailto:hefengen@hotmail.com)
 :::
 
 ::: tip 我的个人链接
-昵称：Finen<br>
-链接：https://www.finen.top/<br>
-头像链接：https://finen-1251602255.cos.ap-shanghai.myqcloud.com/file/pic/finen.png<br>
+昵称：IT 民工<br>
+链接：https://hefeng1208.github.com/utopia/<br>
 介绍：Stay Hungry! Stay Foolish!
 :::
